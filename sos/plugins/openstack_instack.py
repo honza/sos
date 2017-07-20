@@ -45,7 +45,7 @@ class OpenStackInstack(Plugin):
                                sizelimit=self.limit)
 
         vars = [p in os.environ for p in [
-                'OS_USERNAME', 'OS_PASSWORD', 'OS_TENANT_NAME']]
+                'OS_USERNAME', 'OS_PASSWORD', 'OS_PROJECT_NAME']]
         if not all(vars):
             self.soslog.warning("Not all environment variables set. Source "
                                 "the environment file for the user intended "
